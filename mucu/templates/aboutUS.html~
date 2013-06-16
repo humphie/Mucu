@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block head1 %}
+
+<div id="menu">
+        <ul>
+            <li><a href="/" ><span></span>Home</a></li>
+            <li><a href="/aboutUs/" class="current"><span></span>About Us</a></li>
+            <li><a href="/leadership/"><span></span>Leadership</a></li>
+            <li><a href="/partners/"><span></span>Partners</a></li>
+            <li><a href="/gallery/"><span></span>Gallery</a></li>
+            <li><a href="/contacts/"><span></span>Contacts</a></li>
+            <li><a href="/summons/"><span></span>summons</a></li>
+        </ul>    	
+    </div> <!-- end of menu -->
+
+{% endblock %}

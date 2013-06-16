@@ -1,0 +1,15 @@
+from django.db import models
+
+# Create your models here.
+class Member(models.Model):
+	first_name  = models.CharField(max_length=15)
+	last_name   = models.CharField(max_length=15)
+	course      = models.CharField(max_length=20)
+	grad_year   = models.IntegerField()
+	status      = models.CharField(max_length=7 )
+	e_mail	    = models.EmailField(blank=True)
+	phone_number= models.IntegerField()
+	
+def __unicode__(self):
+    return self.first_name
+
