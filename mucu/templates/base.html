@@ -5,29 +5,10 @@
 <title>MAKERERE CHRISTIAN UNION</title>
 
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/js/contact_us.js"></script>
+<script type="text/javascript" src="/static/js/news_letter.js"></script>
 </head>
 <body>
-<div id="header_wrapper">
-    <div id="header">
-        <div id="site_title_section">
-            <div id="site_title">
-	          M. U. C. U
-          </div>
-            <div id="salogon">
-	            Preaching Christ, ministering 
-                     God's love  on campus!</div>
-            <div class="cleaner">&nbsp;</div>
-        </div>
-        
-        <div id="search_section">
-            <form action="#" method="get">
-                <input type="text" name="q" size="10" id="searchfield" title="searchfield" />
-                <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" />
-            </form>
-        </div>    
-    </div> <!-- end of header -->
-</div>  <!-- end of header wrapper -->
-
 <div id="banner_wrapper">
     <div id="banner">
     
@@ -72,12 +53,13 @@
         
         <div class="content_left_section">
             <div class="content_header_01">Newsletter</div>
-            <p>Please enter your email address to subscribe our newsletter</p>
-            <form action="#" method="get">
-                <input type="text" id="search_field" />
-                <input type="submit" value="Subscribe" id="subscribe_button" />
+            <p>Please enter your email address to subscribe for our newsletter</p>
+            <form id="news_letter_form" name="news_letter_form">
+                <input type="email" id="e_mail" name="e_mail" />
+                <input type="button" value="Subscribe"  onClick="return Subscriber();" id="subscribe_button"/>
             </form>
             <div class="cleaner"></div>
+            <em id="news_letter_res"></em>
         </div>
         
         <div class="margin_bottom_20 border_bottom"></div>
@@ -96,7 +78,7 @@
             <div class="content_header_01">{% block head3 %}{% endblock %}</div>
             
                 {% block content3 %}{% endblock %}
-
+               
             </div>
     
         <div class="content_right_280_section">
@@ -125,7 +107,7 @@
 
 <div id="footer_wrapper">        
     <div id="footer">
-        Copyright © 2013 <a href="index.html">Makerere Christian Union</a> | 
+        Copyright © 2013 <a href="/">Makerere Christian Union</a> | 
         </div><!-- end of footer -->
 </div><!-- end of footer wrapper -->
 </body>

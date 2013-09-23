@@ -1,18 +1,43 @@
 {% extends 'base.html' %}
 
-
 {% block head1 %}
 
 <div id="menu">
         <ul>
             <li><a href="/" ><span></span>Home</a></li>
             <li><a href="/aboutUs/"><span></span>About Us</a></li>
-            <li><a href="/leadership/"><span></span>Leadership</a></li>
-            <li><a href="/partners/"><span></span>Partners</a></li>
+            <li><a href="/departments/"><span></span>Departments</a></li>
+            <li><a href="/fellowship/"><span></span>Fellowships</a></li>
             <li><a href="/gallery/"><span></span>Gallery</a></li>
-            <li><a href="/contacts/" class="current"><span></span>Contacts</a></li>
-            <li><a href="/summons/"><span></span>summons</a></li>
+            <li><a href="/contacts/" class="current"><span></span>Contact Us</a></li>
         </ul>    	
     </div> <!-- end of menu -->
 
 {% endblock %}
+
+
+{% block head2 %}{% endblock %}
+{% block content2 %}{% endblock %}
+
+
+{%block head3%}<h3>Contact Us.</h3>{% endblock%}
+{%block content3%}
+	<form name="contact_us" id="contact_us" >
+	  {% csrf_token %}
+	{% for field in contactUs %}
+	    {{field.name}} </br>
+		{{field}} </br>
+	{%endfor%}
+	<input type="button" id="button" value="Submit" onClick="return contactUs();" name="submit" />
+	</form></br>
+	  <div id="response"></div>	
+
+{% endblock%}
+
+
+{% block head4 %}{% endblock %}
+{% block content4 %}{% endblock %}
+
+{% block head5 %}{% endblock %}
+{% block content5 %}{% endblock %}
+
