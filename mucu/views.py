@@ -17,8 +17,8 @@ def departments(request):
   return render_to_response('department.html') 
 
 #method for the About Us page
-def partners(request):
-  return render_to_response('partners.html')
+def fellowships(request):
+  return render_to_response('fellowships.html')
 
 #method for the About Us page
 def gallery(request):
